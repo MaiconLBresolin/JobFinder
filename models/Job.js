@@ -18,7 +18,7 @@ const Job = db.define("job", {
   EMAIL: {
     type: Sequelize.STRING,
   },
-  NEW: {
+  NEW_JOB: {
     type: Sequelize.INTEGER,
   },
 });

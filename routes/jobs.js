@@ -8,7 +8,7 @@ router.get("/test", (req, res) => {
 
 // add job via post
 router.post("/add", (req, res) => {
-  let { TITLE, SALARY, COMPANY, DESCRIPTION, EMAIL, NEW } = req.body;
+  let { TITLE, SALARY, COMPANY, DESCRIPTION, EMAIL, NEW_JOB } = req.body;
 
   //insert
   Job.create({
@@ -17,7 +17,7 @@ router.post("/add", (req, res) => {
     SALARY,
     COMPANY,
     EMAIL,
-    NEW,
+    NEW_JOB,
   })
     .then(() => res.redirect("/"))
     .catch((err) => console.log(err));
