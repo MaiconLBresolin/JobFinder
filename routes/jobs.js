@@ -12,16 +12,16 @@ router.get("/add", (req, res) => {
 
 // add job via post
 router.post("/add", (req, res) => {
-  let { TITLE, SALARY, COMPANY, DESCRIPTION, EMAIL, NEW_JOB } = req.body;
+  let { title, salary, company, description, email, new_job } = req.body;
 
   //insert
   Job.create({
-    TITLE,
-    DESCRIPTION,
-    SALARY,
-    COMPANY,
-    EMAIL,
-    NEW_JOB,
+    title,
+    description,
+    salary,
+    company,
+    email,
+    new_job,
   })
     .then(() => res.redirect("/"))
     .catch((err) => console.log(err));
